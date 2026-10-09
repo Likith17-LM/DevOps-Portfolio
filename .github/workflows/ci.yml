@@ -1,0 +1,15 @@
+name: First CI Pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: self-hosted
+
+    steps:
+      - name: Check the runner
+        run: |
+          echo "My pipeline is running on EC2"
+          whoami
+          pwd
